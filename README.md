@@ -9,21 +9,20 @@ Clone, run bootstrap, and any company has the foundation of an AI OS scaffolded 
 ```
 aios/
 ├── README.md
-├── LICENSE                         MIT
-├── LICENSE-NATE.md                 Nate Herk's MIT preserved verbatim
-├── BASED_ON.md                     Upstream attribution + snapshot commit
+├── LICENSE
 ├── bootstrap.sh                    One-command setup
 ├── scaffold/                       ← copied into target/aios/ on bootstrap
 │   ├── CLAUDE.md                   Claude Code entry point template
+│   ├── SESSION_HANDOFF.md          Session-state file Claude reads first
 │   ├── connections.md              7-bucket data map (Revenue / Customer /
 │   │                               Calendar / Comms / Tasks / Meetings /
 │   │                               Knowledge)
 │   ├── aios-intake.md              Onboarding interview template
-│   ├── EXPANSIONS.md               Future-stack ideas
+│   ├── EXPANSIONS.md               What to add as the AIOS grows
 │   ├── decisions/log.md            Decisions journal
 │   ├── archives/, context/         Working state
-│   ├── references/3ms-framework.md The Three Ms of AI™ framework (MIT, ™ Nate Herk)
-│   └── .claude/skills/             onboard / audit / level-up
+│   ├── references/                 Frameworks + voice samples + API guides
+│   └── .claude/skills/             /onboard, /audit, /level-up
 ├── integrations/                   Reusable per-system technical playbooks
 │   ├── hubspot.md
 │   ├── google-workspace.md
@@ -64,14 +63,18 @@ That's it. The scaffold is now running.
 5. **Context Mode** — output compression, longer sessions
 6. **Claude Mem** — local vector-search cross-session memory
 
-Conditional: **Front-end Design** if the company will ship UI.
+Conditional: **Front-end Design** — install only if shipping UI.
 
-## Licensing + attribution
+## Session protocol
 
-- **My work:** MIT. See [`LICENSE`](LICENSE).
-- **Nate Herk's scaffold:** MIT, vendored into `scaffold/`. Original notice preserved at [`LICENSE-NATE.md`](LICENSE-NATE.md). Upstream commit + delta tracking in [`BASED_ON.md`](BASED_ON.md).
-- "The Three Ms of AI™" is Nate Herk's trademark. Framework content is MIT; trademarked name reserved.
+Every Claude session opens by reading `SESSION_HANDOFF.md` — the living snapshot of current objective, what's working / broken, exact next steps. Updated mid-session whenever a decision lands or a file is touched. This kills the "re-explain the project" tax at the start of every session.
 
-## Contributing back
+## Stacking knowledge
 
-This repo evolves as new skills, integrations, and scaffold improvements are validated. Knowledge gets stacked here — no per-company data, no opinions about delivery, no sales material. Pure scaffold.
+This repo evolves as new skills, integrations, and scaffold improvements are validated. No per-company data, no opinions about delivery, no sales material — pure scaffold.
+
+## License + credits
+
+MIT. See [`LICENSE`](LICENSE).
+
+Built on the foundation of an MIT-licensed AIOS scaffold by Nate Herk — full attribution + upstream tracking in [`ATTRIBUTION.md`](ATTRIBUTION.md), preserved license in [`THIRD_PARTY_LICENSES.md`](THIRD_PARTY_LICENSES.md).

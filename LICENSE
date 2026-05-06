@@ -12,10 +12,9 @@ furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-Portions of this repository under `scaffold/` are derived from Nate Herk's
-MIT-licensed AIS-OS scaffold; that work's copyright notice and license are
-preserved in `LICENSE-NATE.md`. "The Three Ms of AI™" is a trademark of
-Nate Herk; the trademark on the name is reserved by him.
+Portions of this repository under `scaffold/` are derived from third-party
+MIT-licensed work; those copyright notices and licenses are preserved in
+`THIRD_PARTY_LICENSES.md`. See `ATTRIBUTION.md` for full credits.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,

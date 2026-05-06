@@ -34,23 +34,39 @@ aios/
 
 ## Use it
 
-```bash
-# In any company's working directory:
-git clone https://github.com/torinhofmann/aios.git aios-tmp
-./aios-tmp/bootstrap.sh
-rm -rf aios-tmp
+Two ways. Pick whichever fits the machine.
 
-# Customize:
+### Option A — let Claude Code do it for you (easiest)
+
+Open Claude Code on the target machine (any directory) and tell it:
+
+> Follow the setup instructions at https://github.com/torinhofmann/aios. Clone the repo, run the bootstrap into this directory, install the production-baseline skills, and walk me through customizing CLAUDE.md and connections.md for this company.
+
+Claude reads the repo, runs the commands, asks for company context inline. Done.
+
+### Option B — manual commands
+
+```bash
+# 1. Clone the kit somewhere persistent on the machine
+git clone https://github.com/torinhofmann/aios.git
 cd aios
+
+# 2. Bootstrap a scaffold into the company's working folder
+./bootstrap.sh /path/to/company-project
+
+# 3. Install production-baseline skills (idempotent — safe to re-run)
+./scripts/install-skills.sh
+
+# 4. Customize the bootstrapped scaffold
+cd /path/to/company-project/aios
 $EDITOR CLAUDE.md           # add company business context
 $EDITOR connections.md      # their actual stack
 $EDITOR aios-intake.md      # company-specific onboarding questions
-
-# Install production-baseline skills on the machine:
-~/aios/scripts/install-skills.sh
 ```
 
-That's it. The scaffold is now running.
+That's it. The scaffold is running.
+
+The cloned `aios/` folder stays around — `git pull` later for updates, re-run `install-skills.sh` if a new machine joins, browse `integrations/` for new system playbooks as you connect them.
 
 ## Production-baseline skills
 

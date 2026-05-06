@@ -17,6 +17,7 @@ Read `references/3ms-framework.md` once. It's how {{Your Name}} thinks about AI 
 - `/onboard` — already run if you're seeing this filled in. Re-run any time to refresh from an edited `aios-intake.md`.
 - `/audit` — Four-Cs gap report. Run on Day 7, then weekly. Watch your score climb.
 - `/level-up` — Weekly 3Ms interview. Find one automation, scope it, ship it. One per week.
+- `/handoff` — Update `SESSION_HANDOFF.md` with current state. Run end-of-session, before risky operations, or when the user says "handoff" / "checkpoint" / "save state".
 
 **Production-baseline skills** (installed via plugin manager — see `scripts/install-skills.sh` in the parent kit):
 
@@ -27,6 +28,7 @@ Read `references/3ms-framework.md` once. It's how {{Your Name}} thinks about AI 
 - `/ultra-review` — heavyweight cloud review. Use only on high-stakes commits (payments, auth, data migrations).
 - **Context Mode** — output compression + longer sessions. Toggle on for 1+ hour working sessions.
 - **Claude Mem** — local vector-search cross-session memory. Cuts the "re-explain the project" tax at the start of every session by ~10x.
+- **Context7** — up-to-date library docs lookup. Use whenever you'd otherwise web-search for API syntax or framework usage.
 - **Front-end Design** (conditional) — install only if shipping client-facing UI.
 
 ## Where things live

@@ -1,0 +1,22 @@
+# Don't commit per-engagement working state
+.engagement.md
+*.engagement.md
+
+# Don't commit credentials or env files
+.env
+.env.*
+*.pem
+*.key
+service-account*.json
+
+# Don't commit runtime junk
+.DS_Store
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Don't commit anything client-specific
+clients/
+client-*/
